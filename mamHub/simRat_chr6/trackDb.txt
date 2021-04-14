@@ -1,0 +1,85 @@
+track gcPercent
+longLabel GC Percent in 5-base Window
+shortLabel GC Percent
+type bigWig 0 100
+group map
+visibility dense
+windowingFunction Mean
+bigDataUrl simRat_chr6.gc.bw
+priority 2
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+html ../documentation/gcPercent
+
+track alignability
+longLabel Alignability
+shortLabel Alignability
+type bigWig 0 3
+group map
+visibility dense
+windowingFunction Mean
+bigDataUrl simRat_chr6.alignability.bw
+priority 2
+autoScale On
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+color 0,0,0
+altColor 128,128,128
+viewLimits 0:3
+html ../documentation/alignability
+
+track hubCentral
+compositeTrack on
+shortLabel my hub
+longLabel my hub
+group comphub
+subGroup1 view Track_Type Snake=Alignments  
+subGroup2 orgs Organisms mr=mr simMouse_chr6=simMouse_chr6 simRat_chr6=simRat_chr6
+dragAndDrop subTracks
+#allButtonPair on
+dimensions dimensionX=view dimensionY=orgs
+noInherit on
+priority 0
+centerLabelsDense on
+visibility full
+html ../documentation/hubCentral
+type bigBed 3
+
+	track hubCentralAlignments
+	shortLabel Alignments
+	view Alignments
+	visibility full
+	subTrack hubCentral
+
+		track snakemr
+		longLabel mr
+		shortLabel mr
+		otherSpecies mr
+		visibility full
+		parent hubCentralAlignments
+		showSnpWidth 2452
+		priority 2
+		bigDataUrl ../lod.txt
+		type halSnake
+		group snake
+		subGroups view=Snake orgs=mr
+
+		track snakesimMouse_chr6
+		longLabel simMouse_chr6
+		shortLabel simMouse_chr6
+		otherSpecies simMouse_chr6
+		visibility full
+		parent hubCentralAlignments
+		showSnpWidth 2452
+		priority 3
+		bigDataUrl ../lod.txt
+		type halSnake
+		group snake
+		subGroups view=Snake orgs=simMouse_chr6
+

@@ -1,0 +1,33 @@
+genome mr
+twoBitPath mr/mr.2bit
+trackDb mr/trackDb.txt
+groups groups.txt
+htmlPath mr/description.html
+description mr
+organism mr
+orderKey 4800
+scientificName mr
+defaultPos mrrefChr2:1-1000
+
+genome simMouse_chr6
+twoBitPath simMouse_chr6/simMouse_chr6.2bit
+trackDb simMouse_chr6/trackDb.txt
+groups groups.txt
+htmlPath simMouse_chr6/description.html
+description simMouse_chr6
+organism simMouse_chr6
+orderKey 4800
+scientificName simMouse_chr6
+defaultPos simMouse.chr6:1-1000
+
+genome simRat_chr6
+twoBitPath simRat_chr6/simRat_chr6.2bit
+trackDb simRat_chr6/trackDb.txt
+groups groups.txt
+htmlPath simRat_chr6/description.html
+description simRat_chr6
+organism simRat_chr6
+orderKey 4800
+scientificName simRat_chr6
+defaultPos simRat.chr6:1-1000
+

@@ -1,0 +1,7 @@
+0 evolverMammals.hal
+2453 lod/evolverMammals_lod_28.hal
+6244 lod/evolverMammals_lod_70.hal
+15610 lod/evolverMammals_lod_177.hal
+39471 lod/evolverMammals_lod_442.hal
+98566 lod/evolverMammals_lod_1106.hal
+246638 lod/evolverMammals_lod_2765.hal
